@@ -33,12 +33,12 @@ data converter implement of golang.
 		},
 	}
 
-	data := TestCase{
+	data := TestCase0{
 		ID:   1,
 		Name: "test",
 		Age:  23,
 	}
-	data2 := TestCaseTo{
+	data2 := TestCase1{
 		UID:   101,
 		UName: "default",
 		UAge:  10,
