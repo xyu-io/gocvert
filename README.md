@@ -51,7 +51,7 @@ data converter implement of golang.
 		return
 	}
 
-	err = SwapTags(&tmp1, &data2, opto)
+	err = SwapWithTags(&tmp1, &data2, opto)
 	if err != nil {
 		t.Error(err)
 		return
