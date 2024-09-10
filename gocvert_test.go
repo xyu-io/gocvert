@@ -2,13 +2,13 @@ package gocvert
 
 import "testing"
 
-type TestCase struct {
+type TestCase0 struct {
 	ID   int
 	Name string
 	Age  int
 }
 
-type TestCaseTo struct {
+type TestCase1 struct {
 	UID   int
 	UName string
 	UAge  int
@@ -37,12 +37,12 @@ func TestGoCvert(t *testing.T) {
 		},
 	}
 
-	data := TestCase{
+	data := TestCase0{
 		ID:   1,
 		Name: "test",
 		Age:  23,
 	}
-	data2 := TestCaseTo{
+	data2 := TestCase1{
 		UID:   101,
 		UName: "default",
 		UAge:  10,
@@ -80,7 +80,7 @@ func BenchmarkFieldGoCvert(b *testing.B) {
 		},
 	}
 
-	data := TestCase{
+	data := TestCase0{
 		ID:   1,
 		Name: "test",
 		Age:  23,
@@ -107,13 +107,13 @@ func BenchmarkSwapGoCvert(b *testing.B) {
 		},
 	}
 
-	data1 := TestCase{
+	data1 := TestCase0{
 		ID:   1,
 		Name: "test",
 		Age:  23,
 	}
 
-	data2 := TestCaseTo{
+	data2 := TestCase1{
 		UID:   101,
 		UName: "default",
 		UAge:  10,
