@@ -60,7 +60,7 @@ func RewriteField(data any, opt FieldOption) error {
 	return fmt.Errorf("convert value of struct field with tag %s ", opt.Tag)
 }
 
-func SwapTags(data, target any, opt []SwapOption) error {
+func SwapWithTags(data, target any, opt []SwapOption) error {
 
 	value := reflect.ValueOf(data)
 	// 必须是结构体指针类型数据
@@ -74,7 +74,7 @@ func SwapTags(data, target any, opt []SwapOption) error {
 
 	var err error
 	for _, op := range opt {
-		err = SwapTag(data, target, op)
+		err = SwapWithTag(data, target, op)
 		if err != nil {
 			log.Println(err)
 		}
@@ -83,7 +83,7 @@ func SwapTags(data, target any, opt []SwapOption) error {
 	return nil
 }
 
-func SwapTag(data, target any, opt SwapOption) error {
+func SwapWithTag(data, target any, opt SwapOption) error {
 
 	value := reflect.ValueOf(data)
 	// 必须是结构体指针类型数据

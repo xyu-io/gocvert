@@ -59,7 +59,7 @@ func TestGoCvert(t *testing.T) {
 
 	t.Logf("%+v convert values  >> %+v \n", tmp1, data)
 
-	err = SwapTags(&tmp1, &data2, opto)
+	err = SwapWithTags(&tmp1, &data2, opto)
 	if err != nil {
 		t.Error(err)
 		return
@@ -119,7 +119,7 @@ func BenchmarkSwapGoCvert(b *testing.B) {
 		UAge:  10,
 	}
 	for i := 0; i < b.N; i++ {
-		err := SwapTags(&data1, &data2, opto)
+		err := SwapWithTags(&data1, &data2, opto)
 		if err != nil {
 			b.Error(err)
 			return
